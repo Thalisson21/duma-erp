@@ -6,7 +6,9 @@ export const CSS_VAR_PREFIX = '';
 
 const config = {
   fontFamily: `'Roboto', sans-serif`,
-  borderRadius: 8
+  borderRadius: 8,
+  outlinedFilled: true,
+  presetColor: 'default'
 };
 
 export default config;

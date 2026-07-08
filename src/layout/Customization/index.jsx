@@ -17,6 +17,8 @@ import Box from '@mui/material/Box';
 // project imports
 import FontFamily from './FontFamily';
 import BorderRadius from './BorderRadius';
+import PresetColor from './PresetColor';
+import ThemeMode from './ThemeMode';
 
 import { DEFAULT_THEME_MODE } from 'config';
 import MainCard from 'ui-component/cards/MainCard';
@@ -100,6 +102,16 @@ export default function Customization() {
               </Stack>
               <Divider />
               <Grid container spacing={2}>
+                <Grid size={12}>
+                  {/* theme mode */}
+                  <ThemeMode />
+                  <Divider />
+                </Grid>
+                <Grid size={12}>
+                  {/* color palette */}
+                  <PresetColor />
+                  <Divider />
+                </Grid>
                 <Grid size={12}>
                   {/* font family */}
                   <FontFamily />
