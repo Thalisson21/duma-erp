@@ -643,11 +643,6 @@
   resolved "https://registry.npmjs.org/@parcel/watcher-linux-x64-glibc/-/watcher-linux-x64-glibc-2.5.6.tgz"
   integrity sha512-kbT5wvNQlx7NaGjzPFu8nVIW1rWqV780O7ZtkjuWaPUgpv2NMFpjYERVi0UYj1msZNyCzGlaCWEtzc+exjMGbQ==
 
-"@parcel/watcher-linux-x64-musl@2.5.6":
-  version "2.5.6"
-  resolved "https://registry.npmjs.org/@parcel/watcher-linux-x64-musl/-/watcher-linux-x64-musl-2.5.6.tgz"
-  integrity sha512-1JRFeC+h7RdXwldHzTsmdtYR/Ku8SylLgTU/reMuqdVD7CtLwf0VR1FqeprZ0eHQkO0vqsbvFLXUmYm/uNKJBg==
-
 "@parcel/watcher@^2.4.1":
   version "2.5.6"
   resolved "https://registry.npmjs.org/@parcel/watcher/-/watcher-2.5.6.tgz"
@@ -714,11 +709,6 @@
   version "4.62.2"
   resolved "https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.62.2.tgz"
   integrity sha512-5BqxR/pshjey51iliyzTD5Xi3EN0aLmQ2lZ3lvefVV9c82BvrLo2/6OT55iifpWBufs6kdwWbuOKS841DrmK9A==
-
-"@rollup/rollup-linux-x64-musl@4.62.2":
-  version "4.62.2"
-  resolved "https://registry.npmjs.org/@rollup/rollup-linux-x64-musl/-/rollup-linux-x64-musl-4.62.2.tgz"
-  integrity sha512-uNN83XxQrRAh/w0/pmAfibcwyb6YWt4gP+dpnQKPVJshAloQ785ii8CT8ZCIxkGg9opVsvAlGhFitSm6D1Jjpg==
 
 "@sinclair/typebox@^0.27.8":
   version "0.27.10"
@@ -2061,13 +2051,13 @@ foreground-child@^3.1.0:
     cross-spawn "^7.0.6"
     signal-exit "^4.0.1"
 
-framer-motion@12.23.25:
-  version "12.23.25"
-  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-12.23.25.tgz"
-  integrity sha512-gUHGl2e4VG66jOcH0JHhuJQr6ZNwrET9g31ZG0xdXzT0CznP7fHX4P8Bcvuc4MiUB90ysNnWX2ukHRIggkl6hQ==
+framer-motion@^12.42.2:
+  version "12.42.2"
+  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-12.42.2.tgz"
+  integrity sha512-5XY9luDiu0oHfHBjpDthFMh0ES+122w6p/papSJBweMkO8Sn+PW2QaEgRblQBpWFnuvZS5qvarpt/hO2pjGmnw==
   dependencies:
-    motion-dom "^12.23.23"
-    motion-utils "^12.23.6"
+    motion-dom "^12.42.2"
+    motion-utils "^12.39.0"
     tslib "^2.4.0"
 
 fs.realpath@^1.0.0:
@@ -2827,14 +2817,14 @@ moo@^0.5.1:
   resolved "https://registry.npmjs.org/moo/-/moo-0.5.3.tgz"
   integrity sha512-m2fmM2dDm7GZQsY7KK2cme8agi+AAljILjQnof7p1ZMDe6dQ4bdnSMx0cPppudoeNv5hEFQirN6u+O4fDE0IWA==
 
-motion-dom@^12.23.23:
+motion-dom@^12.42.2:
   version "12.42.2"
   resolved "https://registry.npmjs.org/motion-dom/-/motion-dom-12.42.2.tgz"
   integrity sha512-5gIMWLp/PycBtJRJWRgjxke5n8dlvkSn2DrYW+tr3XcqAZY1xZh6BJyooJXCM8wdfM7wfMjkBJNLge1CKPUIRA==
   dependencies:
     motion-utils "^12.39.0"
 
-motion-utils@^12.23.6, motion-utils@^12.39.0:
+motion-utils@^12.39.0:
   version "12.39.0"
   resolved "https://registry.npmjs.org/motion-utils/-/motion-utils-12.39.0.tgz"
   integrity sha512-8nadJAJjTtqRkmRF36FoJTrywK9nnFmnPwnSMyxaOCU7GDjN9RTMJIxx9De8ErM+vpPhMccr/6fo5WciyQLnMQ==

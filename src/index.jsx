@@ -5,6 +5,7 @@ import App from 'App';
 import * as serviceWorker from 'serviceWorker';
 import reportWebVitals from 'reportWebVitals';
 import { ConfigProvider } from 'contexts/ConfigContext';
+import { AuthProvider } from 'contexts/AuthContext';
 
 // style + assets
 import 'assets/scss/style.scss';
@@ -30,9 +31,11 @@ import '@fontsource/poppins/700.css';
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
-  <ConfigProvider>
-    <App />
-  </ConfigProvider>
+  <AuthProvider>
+    <ConfigProvider>
+      <App />
+    </ConfigProvider>
+  </AuthProvider>
 );
 
 // If you want your app to work offline and load faster, you can change

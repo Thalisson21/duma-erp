@@ -1,17 +1,19 @@
 // assets
-import { IconKey } from '@tabler/icons-react';
+import { IconKey, IconAddressBook, IconUsers } from '@tabler/icons-react';
 
 // constant
 const icons = {
-  IconKey
+  IconKey,
+  IconAddressBook,
+  IconUsers
 };
 
 // ==============================|| EXTRA PAGES MENU ITEMS ||============================== //
 
 const pages = {
   id: 'pages',
-  title: 'Pages',
-  caption: 'Pages Caption',
+  title: 'Páginas',
+  caption: 'Páginas Operacionais',
   icon: icons.IconKey,
   type: 'group',
   children: [
@@ -34,6 +36,21 @@ const pages = {
           type: 'item',
           url: '/pages/register',
           target: true
+        }
+      ]
+    },
+    {
+      id: 'registers',
+      title: 'Cadastros',
+      type: 'collapse',
+      icon: icons.IconAddressBook,
+      children: [
+        {
+          id: 'clients',
+          title: 'Clientes',
+          type: 'item',
+          icon: icons.IconUsers,
+          url: '/pages/register/clients'
         }
       ]
     }

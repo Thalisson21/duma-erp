@@ -71,39 +71,40 @@ export default function Breadcrumbs({
   let customLocation = location.pathname;
 
   useEffect(() => {
-    navigation?.items?.map((menu) => {
-      if (menu.type && menu.type === 'group') {
-        if (menu?.url && menu.url === customLocation) {
-          setMain(menu);
-          setItem(menu);
+    let activeMain;
+    let activeItem;
+
+    const findActiveItem = (menu) => {
+      if (!custom && menu.children) {
+        menu.children.forEach((child) => {
+          if (child.type === 'collapse') {
+            findActiveItem(child);
+            if (child.url === customLocation) {
+              activeMain = child;
+              activeItem = child;
+            }
+          } else if (child.type === 'item' && child.url === customLocation) {
+            activeMain = menu;
+            activeItem = child;
+          }
+        });
+      }
+    };
+
+    navigation?.items?.forEach((menu) => {
+      if (menu.type === 'group') {
+        if (menu.url === customLocation) {
+          activeMain = menu;
+          activeItem = menu;
         } else {
-          getCollapse(menu);
+          findActiveItem(menu);
         }
       }
-      return false;
     });
-  });
 
-  // set active item state
-  const getCollapse = (menu) => {
-    if (!custom && menu.children) {
-      menu.children.filter((collapse) => {
-        if (collapse.type && collapse.type === 'collapse') {
-          getCollapse(collapse);
-          if (collapse.url === customLocation) {
-            setMain(collapse);
-            setItem(collapse);
-          }
-        } else if (collapse.type && collapse.type === 'item') {
-          if (customLocation === collapse.url) {
-            setMain(menu);
-            setItem(collapse);
-          }
-        }
-        return false;
-      });
-    }
-  };
+    setMain(activeMain);
+    setItem(activeItem);
+  }, [custom, customLocation]);
 
   // item separator
   const SeparatorIcon = separator;
