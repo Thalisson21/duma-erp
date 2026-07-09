@@ -5,7 +5,7 @@ export async function login(credentials) {
   try {
     const response = await request('login', {
       method: 'POST',
-      body: JSON.stringify(credentials),
+      data: credentials,
       skipUnauthorizedHandler: true
     });
 

@@ -17,6 +17,7 @@ const presets = [
   { id: 'default', label: 'Berry', primary: '#2196f3', secondary: '#673ab7' },
   { id: 'ocean', label: 'Ocean', primary: '#2563eb', secondary: '#0f766e' },
   { id: 'emerald', label: 'Emerald', primary: '#16a34a', secondary: '#d97706' },
+  { id: 'floresta', label: 'Floresta', primary: '#15803d', secondary: '#65a30d' },
   { id: 'rose', label: 'Rose', primary: '#e11d48', secondary: '#0284c7' }
 ];
 
