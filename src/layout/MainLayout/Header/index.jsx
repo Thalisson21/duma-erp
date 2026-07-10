@@ -3,26 +3,36 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 // project imports
 import LogoSection from '../LogoSection';
 import SearchSection from './SearchSection';
 import ProfileSection from './ProfileSection';
 import NotificationSection from './NotificationSection';
+import useAuth from 'hooks/useAuth';
+import { isMasterUser } from 'utils/permissions';
 
 import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
 
 // assets
-import { IconMenu2 } from '@tabler/icons-react';
+import { IconDeviceDesktop, IconMenu2 } from '@tabler/icons-react';
 
 // ==============================|| MAIN NAVBAR / HEADER ||============================== //
 
 export default function Header() {
   const theme = useTheme();
   const downMD = useMediaQuery(theme.breakpoints.down('md'));
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { user } = useAuth();
 
   const { menuMaster } = useGetMenuMaster();
   const drawerOpen = menuMaster.isDashboardDrawerOpened;
+  const canAccessAdmin = isMasterUser(user);
+  const isAdminPage = location.pathname.startsWith('/admin');
 
   return (
     <>
@@ -58,6 +68,26 @@ export default function Header() {
 
       {/* notification */}
       <NotificationSection />
+
+      {canAccessAdmin && (
+        <Tooltip title="Administração">
+          <IconButton
+            color="primary"
+            aria-label="Abrir administração"
+            onClick={() => navigate('/admin')}
+            sx={{
+              ml: 1,
+              width: 44,
+              height: 44,
+              color: isAdminPage ? 'primary.contrastText' : 'primary.main',
+              bgcolor: isAdminPage ? 'primary.main' : 'primary.light',
+              '&:hover': { bgcolor: 'primary.main', color: 'primary.contrastText' }
+            }}
+          >
+            <IconDeviceDesktop stroke={1.5} size="22px" />
+          </IconButton>
+        </Tooltip>
+      )}
 
       {/* profile */}
       <ProfileSection />

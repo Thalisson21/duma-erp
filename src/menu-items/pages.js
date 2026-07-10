@@ -1,57 +1,59 @@
 // assets
-import { IconKey, IconAddressBook, IconUsers } from '@tabler/icons-react';
+import { IconBuildingStore, IconFileText, IconForms, IconLayoutSidebar, IconUserDollar, IconUsersGroup } from '@tabler/icons-react';
 
 // constant
 const icons = {
-  IconKey,
-  IconAddressBook,
-  IconUsers
+  IconBuildingStore,
+  IconFileText,
+  IconForms,
+  IconLayoutSidebar,
+  IconUserDollar,
+  IconUsersGroup
 };
 
 // ==============================|| EXTRA PAGES MENU ITEMS ||============================== //
 
 const pages = {
   id: 'pages',
-  title: 'Páginas',
-  caption: 'Páginas Operacionais',
-  icon: icons.IconKey,
+  title: 'Cadastros',
+  caption: 'Cadastros Operacionais',
+  icon: icons.IconLayoutSidebar,
   type: 'group',
   children: [
     {
-      id: 'authentication',
-      title: 'Authentication',
-      type: 'collapse',
-      icon: icons.IconKey,
-      children: [
-        {
-          id: 'login',
-          title: 'Login',
-          type: 'item',
-          url: '/pages/login',
-          target: true
-        },
-        {
-          id: 'register',
-          title: 'Register',
-          type: 'item',
-          url: '/pages/register',
-          target: true
-        }
-      ]
-    },
-    {
       id: 'registers',
-      title: 'Cadastros',
+      title: 'Operações de Cadastro',
       type: 'collapse',
-      icon: icons.IconAddressBook,
+      icon: icons.IconForms,
       children: [
         {
           id: 'clients',
           title: 'Clientes',
           type: 'item',
-          icon: icons.IconUsers,
+          icon: icons.IconUsersGroup,
           url: '/pages/register/clients'
-        }
+        },
+          {
+          id: 'brokers',
+          title: 'Corretores',
+          type: 'item',
+          icon: icons.IconUserDollar,
+          url: '/pages/register/brokers'
+        },
+          {
+          id: 'operators',
+          title: 'Operadoras',
+          type: 'item',
+          icon: icons.IconBuildingStore,
+          url: '/pages/register/operators'
+        },
+          {
+          id: 'proposals',
+          title: 'Propostas',
+          type: 'item',
+          icon: icons.IconFileText,
+          url: '/pages/register/proposals'
+        },
       ]
     }
   ]

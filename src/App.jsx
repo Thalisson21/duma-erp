@@ -7,6 +7,7 @@ import router from 'routes';
 import NavigationScroll from 'layout/NavigationScroll';
 
 import ThemeCustomization from 'themes';
+import { ToastProvider } from 'services/toastService';
 
 // auth provider
 
@@ -15,11 +16,11 @@ import ThemeCustomization from 'themes';
 export default function App() {
   return (
     <ThemeCustomization>
-      <NavigationScroll>
-        <>
+      <ToastProvider>
+        <NavigationScroll>
           <RouterProvider router={router} />
-        </>
-      </NavigationScroll>
+        </NavigationScroll>
+      </ToastProvider>
     </ThemeCustomization>
   );
 }
