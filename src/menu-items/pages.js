@@ -22,7 +22,7 @@ const pages = {
   children: [
     {
       id: 'registers',
-      title: 'Operações de Cadastro',
+      title: 'Operações Cadastrais',
       type: 'collapse',
       icon: icons.IconForms,
       children: [

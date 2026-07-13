@@ -1,4 +1,4 @@
-import { request } from './httpClient';
+import { request } from '../httpClient';
 
 function getPaginatedResource(path, { page = 1, perPage = 10 } = {}) {
   const [basePath, queryString] = path.split('?');

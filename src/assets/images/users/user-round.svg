@@ -1,5 +1,9 @@
 <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect x="0.00830078" width="32.0667" height="32" rx="16" fill="#FFC107"/>
+<style>
+  #bg { fill: #FFC107; }
+  @media (prefers-color-scheme: dark) { #bg { fill: #37474F; } }
+</style>
+<rect id="bg" x="0.00830078" width="32.0667" height="32" rx="16"/>
 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="32">
 <rect x="0.00830078" width="32.0667" height="32" rx="16" fill="#1E88E5"/>
 </mask>

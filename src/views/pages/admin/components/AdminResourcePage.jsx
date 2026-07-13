@@ -168,7 +168,7 @@ export default function AdminResourcePage({ columns, description, getData, pagin
 
               {!isInitialLoading && items.length === 0 && (
                 <TableRow>
-                  <TableCell colSpan={columns.length} align="center" sx={{ py: 4 }}>
+                  <TableCell  colSpan={columns.length} align="center" sx={{ py: 4 }}>
                     <Typography variant="body2" color="text.secondary">
                       Nenhum registro encontrado.
                     </Typography>

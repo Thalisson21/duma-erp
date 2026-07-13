@@ -15,7 +15,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
 import { getAddressByCep } from 'api/cep';
-import { createClient, updateClient } from 'api/clients';
+import { createClient, updateClient } from 'api/register/clients';
 import { useToast } from 'services/toastService';
 import { formatCPFOrCNPJ, formatCellphone, formatZipCode, onlyNumbers } from 'utils/masks';
 

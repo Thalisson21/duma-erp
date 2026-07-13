@@ -18,7 +18,7 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import { IconPlus } from '@tabler/icons-react';
 
-import { getClients } from 'api/clients';
+import { getClients } from 'api/register/clients';
 import MainCard from 'ui-component/cards/MainCard';
 import { useToast } from 'services/toastService';
 import { formatCPFOrCNPJToView, formatCellphoneToView, formatDate, onlyNumbers } from 'utils/masks';
@@ -204,12 +204,12 @@ export default function ClientsPage() {
               <Table stickyHeader aria-label="sticky table">
                 <TableHead>
                   <TableRow>
-                    <TableCell>Nome</TableCell>
-                    <TableCell>CPF/CNPJ</TableCell>
-                    <TableCell>Telefone</TableCell>
-                    <TableCell>Email</TableCell>
-                    <TableCell>Data de nascimento</TableCell>
-                    <TableCell>Ações</TableCell>
+                    <TableCell align="center">Nome</TableCell>
+                    <TableCell align="center">CPF/CNPJ</TableCell>
+                    <TableCell align="center">Telefone</TableCell>
+                    <TableCell align="center">Email</TableCell>
+                    <TableCell align="center">Data de nascimento</TableCell>
+                    <TableCell align="center">Ações</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>

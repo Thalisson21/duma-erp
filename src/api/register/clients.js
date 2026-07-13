@@ -1,4 +1,4 @@
-import { request } from './httpClient';
+import { request } from '../httpClient';
 import { onlyNumbers } from 'utils/masks';
 
 const searchParamsByType = {
