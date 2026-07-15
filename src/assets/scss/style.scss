@@ -60,6 +60,26 @@
   background-color: var(--palette-grey-200);
 }
 
+// ==============================|| STATUS PILL ||============================== //
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background-color: #2e7d32;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.66;
+  white-space: nowrap;
+
+  &--negative {
+    background-color: #c62828;
+    color: #ffffff;
+  }
+}
+
 // ==============================|| ANIMATION KEYFRAMES ||============================== //
 
 @keyframes wings {
